@@ -15,8 +15,23 @@ for before in befores:
     cv2.destroyAllWindows()
 """
 
+
 files=[os.path.basename(f) for f in glob.glob(imagePath,recursive=True)
-if os.path.isfile(f)]#imagesフォルダのファイルを取り出す
+if os.path.isfile(f)]#imagesフォルダのファイル名のみを取り出す
+
+
+
+dir="./edited"
+countdir=(sum(os.path.isdir(os.path.join(dir, name)) for name in os.listdir(dir)))
+#editedのフォルダの数
+
+#写真を入れるためのフォルダを作る
+while True:
+    if countdir<20:
+        for i in range(15,331,15):
+            os.makedirs("./edited/rotated_{}_image".format(i),exist_ok=True)
+            countdir-=1
+        break
 
 #imageフォルダ内の写真を全て15°傾ける処理
 for number,file in enumerate(files):

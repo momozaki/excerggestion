@@ -6,7 +6,7 @@ import numpy as np
 imagePath="./images/*"
 
 files=[os.path.basename(f) for f in glob.glob(imagePath,recursive=True)
-if os.path.isfile(f)]#imagesフォルダのファイルを取り出す
+if os.path.isfile(f)]#imagesフォルダのファイル名のみを取り出す
 
 for number,file in enumerate(files):
     img=cv2.imread("./images/{}".format(file))#画像読み込み
