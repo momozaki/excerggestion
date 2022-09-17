@@ -1,12 +1,7 @@
 import shutil
 import os
 
-dir = './edited'
-
-countdir=(sum(os.path.isdir(os.path.join(dir, name)) for name in os.listdir(dir)))
-#editedのフォルダの数
-
-path=dir
+path='./edited'
 move_to="./ゴミ箱"
 
 list_dir_name=os.listdir(path)
@@ -20,16 +15,21 @@ for i in list_dir_name:
         shutil.move(join_path,move_path)
 
 
-"""
-ans=str(input("ついでにゴミ箱の中身も全部消す？(yes/no)"))
 
-if ans=="yes" or "YES" or "イエス" or "いえす":
+ans=input("ついでにゴミ箱の中身も全部消す？(yes/no)→")
+file_exists=os.path.isfile("./ゴミ箱")
+if "y" in ans:
 
-    shutil.rmtree("./ゴミ箱")
+    shutil.rmtree("./ゴミ箱/")
     os.mkdir("ゴミ箱")
+    print("ゴミ箱の中を全削除しました")
 
-elif ans=="no":
+
+else:
+    print("削除しませんでした。")
     pass
-"""
+
+
+
 
 
