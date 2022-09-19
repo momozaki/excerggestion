@@ -1,7 +1,7 @@
 import cv2
 import glob
 import os
-class flip:
+class Flip:
 
     imagePath="./images/*"
     dir="./edited_flip"

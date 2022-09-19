@@ -3,7 +3,7 @@ import os
 import cv2
 import numpy as np
 
-class slide:
+class Slide:
 
     imagePath="./images/*"
 

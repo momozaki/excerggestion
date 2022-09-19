@@ -1,7 +1,7 @@
 import glob
 import os
 import cv2
-class rota:
+class Rota:
 
     imagePath="./images/*"
     """
