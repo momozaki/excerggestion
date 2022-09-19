@@ -28,11 +28,13 @@ class rota:
 
     #写真を入れるためのフォルダを作る
     while True:
-        if countdir<20:
+        if countdir<23:
             for i in range(15,331,15):
                 os.makedirs("./edited_rota/rotated_{}_image".format(i),exist_ok=True)
                 countdir-=1
             break
+        else:
+            pass
 
     #imageフォルダ内の写真を全て15°傾ける処理
     for number,file in enumerate(files):
