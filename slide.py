@@ -31,12 +31,12 @@ class Slide:
         width  = img.shape[1]  # 幅
 
         #画像をpxずつ並行移動0,0が真ん中yは-で上に行く
-        for x in range(0,301,20):
-            for y in range(0,301,20):
+        for right in range(0,301,60):
+            for down in range(0,301,60):
 
 
                 # 平行移動の変換行列を作成
-                afin_matrix = np.float32([[1,0,x],[0,1,y]])
+                afin_matrix = np.float32([[1,0,right],[0,1,down]])
 
                 # アファイン変換適用
                 afin_img = cv2.warpAffine(img,           # 入力画像
@@ -44,8 +44,8 @@ class Slide:
                                         (width,height)  # 解像度
                                         )
 
-                cv2.imwrite(f"./edited_slide/slided_x_300_y_300_image/{x}_{y}{file}",afin_img)
-                cv2.imwrite(f"./all_edited_file/{x}_{y}{file}",afin_img)
+                cv2.imwrite(f"./edited_slide/slided_x_300_y_300_image/{right}_{down}_{file}",afin_img)
+                cv2.imwrite(f"./all_edited_file/{right}_{down}_{file}",afin_img)
     #x=300y=300までを出力する処理
 
     for file in files:
@@ -58,12 +58,12 @@ class Slide:
         width  = img.shape[1]  # 幅
 
         #画像をpxずつ並行移動0,0が真ん中yは-で上に行く
-        for x in range(0,-301,-20):
-            for y in range(0,-301,-20):
+        for left in range(0,-301,-60):
+            for up in range(0,-301,-60):
 
 
                 # 平行移動の変換行列を作成
-                afin_matrix = np.float32([[1,0,x],[0,1,y]])
+                afin_matrix = np.float32([[1,0,left],[0,1,up]])
 
                 # アファイン変換適用
                 afin_img = cv2.warpAffine(img,           # 入力画像
@@ -71,8 +71,8 @@ class Slide:
                                         (width,height)  # 解像度
                                         )
 
-                cv2.imwrite(f"./edited_slide/slided_x_-300_y_-300_image/{x}_{y}{file}",afin_img)
-                cv2.imwrite(f"./all_edited_file/{x}_{y}{file}",afin_img)
+                cv2.imwrite(f"./edited_slide/slided_x_-300_y_-300_image/{left}_{up}_{file}",afin_img)
+                cv2.imwrite(f"./all_edited_file/{left}_{up}_{file}",afin_img)
 
 
 

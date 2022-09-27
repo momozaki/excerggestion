@@ -3,12 +3,15 @@ import os
 
 rota_path='./edited_rota'
 slide_path="./edited_slide"
-flip_path="./edited_flip"
+rotaxslide_path="./edited_rotaxslide"
+
+
 move_to="./ゴミ箱"
 
 list_rota_dir_name=os.listdir(rota_path)
 list_slide_dir_name=os.listdir(slide_path)
-list_flip_dir_name=os.listdir(flip_path)
+list_rotaxslide_dir_name=os.listdir(rotaxslide_path)
+
 
 
 #edited_rotaフォルダの中身をゴミ箱に移動させる
@@ -28,14 +31,16 @@ for i in list_slide_dir_name:
     if os.path.isdir(join_path):
         shutil.move(join_path,move_path)
 
-
-#edited_flipフォルダの中身をゴミ箱に移動させる
-for i in list_flip_dir_name:
-    join_path=os.path.join(flip_path,i)
+#edited_rotaxslideフォルダの中身をゴミ箱に移動させる
+for i in list_rotaxslide_dir_name:
+    join_path=os.path.join(rotaxslide_path,i)
     move_path=os.path.join(move_to,i)
 
     if os.path.isdir(join_path):
         shutil.move(join_path,move_path)
+
+
+
 
 
 
