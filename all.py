@@ -11,17 +11,19 @@ def All():
     from slide import Slide
     from rotaxslide import RotaxSlide
 
-    RotaxSlide()
-    print("rotaxslide実行しました")
-
-    Slide()
-    print("slide実行しました")
-
-    Rota()
-    print("rota実行しました")
-
-   
     
+    Rota()
+
+    
+    Slide()
+
+    
+    RotaxSlide()
+
+
+    print("終了しました。")
+
+All()
     
     
 

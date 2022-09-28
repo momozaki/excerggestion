@@ -31,8 +31,8 @@ class Slide:
         width  = img.shape[1]  # 幅
 
         #画像をpxずつ並行移動0,0が真ん中yは-で上に行く
-        for right in range(0,301,60):
-            for down in range(0,301,60):
+        for right in range(0,401,80):
+            for down in range(0,401,80):
 
 
                 # 平行移動の変換行列を作成
@@ -58,8 +58,8 @@ class Slide:
         width  = img.shape[1]  # 幅
 
         #画像をpxずつ並行移動0,0が真ん中yは-で上に行く
-        for left in range(0,-301,-60):
-            for up in range(0,-301,-60):
+        for left in range(0,-401,-80):
+            for up in range(0,-401,-80):
 
 
                 # 平行移動の変換行列を作成
