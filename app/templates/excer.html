@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>excerggestion</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="../static/css/excer.css">
+    </head>
+
+    <body>
+        <h1>excerggestion</h1>
+        <h2>このサイトでは手の甲の写真から骨格タイプを判定し</h2>
+        <h2>そこからあなたに適したエクササイズを提案します</h2>
+        <div class="container">
+        <a href="https://otetepicture.com/photo/65/">
+            <img src="../static/images/te.png" alt="手の写真" width="400" height="400" align="right">
+            <p class="example">例</p>
+        </a>
+        </div>
+
+        <div class="border">
+            <p class="lead_form">登録フォーム</p>
+            <form action="app.py" method="post" name="registration_name" enctype="multipart/form-data">
+
+                <div class="item">
+                    <p class="namae">名前を記入してください</p>
+                    <div class="inputs">
+                        <input id="name" type="text" placeholder="名字 名前">
+                    </div>
+                </div>
+
+                <div class="item">
+                <p class="seibetu">性別を選択して下さい</p>
+                    <div class="inputs">
+                        <label for="male"><input id="male" type="radio" value="male">男性</label>
+                        <label for="female"><input id="female" type="radio" value="female">女性</label>
+                        <label for="others"><input id="others" type="radio" value="others">その他</label>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="upload">アップロードする手の画像を選択してください</p>
+                    <div>
+                            <input type="file" accept="image/*" onchange="previewFile(this);" required>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="送信する"><input type="reset" value="リセット">
+                  </div>
+            </form>
+        </div>
+
+        <p class="preview">送られる画像</p>
+        <div class="preview_image"><img id="preview"></div>
+ 
+
+        <script>
+            function previewFile(hoge){
+              var fileData = new FileReader();
+              fileData.onload = (function() {
+                //id属性が付与されているimgタグのsrc属性に、fileReaderで取得した値の結果を入力することで
+                //プレビュー表示している
+                document.getElementById('preview').src = fileData.result;
+              });
+              fileData.readAsDataURL(hoge.files[0]);
+            }
+            </script>
+
+
+    </body>
+</html>

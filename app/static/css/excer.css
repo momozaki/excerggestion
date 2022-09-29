@@ -1,0 +1,91 @@
+h1 {
+    color: blue;
+}
+
+.border{
+    border: 3px solid;
+}
+
+.container{
+    width:600px;
+    height: 600px;
+    position: relative;
+  }
+  .container img{
+    width:100%;
+  }
+  .example{
+    position: absolute;
+    top:0;
+    left:0;
+    font-size:30px;
+    color: red;
+    padding:0;
+    margin:0;
+  }
+
+  .lead_form{
+    text-align: center;
+    font-size:20px;
+  }
+  form{
+    width:460px;
+    margin:0 auto;
+  }
+  .item{
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .seibetu{
+    float: left;
+    margin-right: 20px;
+    width:135px;
+    border-left: solid 3px #070ee4;
+    padding-left: 10px;
+  }
+  .namae{
+    float: left;
+    margin-right: 20px;
+    width:135px;
+    border-left: solid 3px #070ee4;
+    padding-left: 10px;
+  }
+  .upload{
+    float: left;
+    margin-right: 20px;
+    width:135px;
+    border-left: solid 3px #070ee4;
+    padding-left: 10px;
+  }
+  .inputs{
+    float: left;
+    width:300px;
+  }
+  .submit{
+    text-align: center;
+  }
+  input[type="submit"]{
+    background: #c50fd5;
+    border: none;
+    color: white;
+    font-size:17px;
+    font-weight:bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+  input[type="reset"]{
+    background: #aaa;
+    border: none;
+    color: white;
+    font-size:17px;
+    font-weight:bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+  .preview{
+    text-align: center;
+    font-size: 50px;
+  }
+  .preview_image{
+    text-align: center;
+  }
