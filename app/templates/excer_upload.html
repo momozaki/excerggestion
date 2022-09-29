@@ -20,27 +20,27 @@
 
         <div class="border">
             <p class="lead_form">登録フォーム</p>
-            <form action="app.py" method="post" name="registration_name" enctype="multipart/form-data">
+            <form action="excer_upload" method="POST" name="registration" enctype="multipart/form-data">
 
                 <div class="item">
                     <p class="namae">名前を記入してください</p>
                     <div class="inputs">
-                        <input id="name" type="text" placeholder="名字 名前">
+                        <input id="name" type="text" name="name" placeholder="名字 名前">
                     </div>
                 </div>
 
                 <div class="item">
                 <p class="seibetu">性別を選択して下さい</p>
                     <div class="inputs">
-                        <label for="male"><input id="male" type="radio" value="male">男性</label>
-                        <label for="female"><input id="female" type="radio" value="female">女性</label>
-                        <label for="others"><input id="others" type="radio" value="others">その他</label>
+                        <label for="male"><input id="male" type="radio" value="male" name="radio">男性</label>
+                        <label for="female"><input id="female" type="radio" value="female" name="radio">女性</label>
+                        <label for="others"><input id="others" type="radio" value="others" name="radio">その他</label>
                     </div>
                 </div>
                 <div class="item">
                     <p class="upload">アップロードする手の画像を選択してください</p>
-                    <div>
-                            <input type="file" accept="image/*" onchange="previewFile(this);" required>
+                    <div class="inputs">
+                            <input type="file" accept="image/*" name="image" onchange="previewFile(this);" required>
                     </div>
                 </div>
 

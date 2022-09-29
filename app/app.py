@@ -1,19 +1,30 @@
-from flask import Flask,render_template,request
+from webbrowser import get
+from flask import Flask, render_template, request, url_for, redirect
+import os
 
 
 app=Flask(__name__)
 
-#「/test」へのアクセス時"test.html"出す
-@app.route("/test")
-def hello():
+#必要な情報を送る
+@app.route("/upload")
+def upload():
+    return render_template("excer_upload.html")
 
-    return render_template("test.html")
 
-#「excer」へのアクセス時にexcer.html出す
+#excer_upload.htmlから来た情報をexcer_uoloaded_file.htmlへ送る
+@app.route("/excer_upload",methods=["GET","POST"])
+def excer_upload():
+    if request.method=="POST":
+        user_name = request.form.get("name")
+        file = request.files["image"]
+        file.save(os.path.join('../app/static/uploaded_images', file.filename))
+        return redirect(url_for('excer_uploaded_file', filename=file.filename))
 
-@app.route("/excer")
-def excer():
-    return render_template("excer.html") 
+#excer_upload.htmlから来た情報をとりあえず表示する
+@app.route('/excer_uploaded_file/<string:filename>')
+def excer_uploaded_file(filename):
+    return render_template('excer_uploaded_file.html', filename=filename)
+
 
 
 if __name__=="main":
