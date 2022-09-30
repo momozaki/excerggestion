@@ -5,7 +5,8 @@ import os
 from werkzeug.security import generate_password_hash
 
 
-#どういったアプリか音声で説明する
+#どういったアプリか音声で説明する  こんにちは横浜システム工学院専門学校aiサービス科excerggestionです
+#私たちは手の写真から骨格を3タイプに分けそのタイプに適したエクササイズを提案します
 
 
 app=Flask(__name__)
