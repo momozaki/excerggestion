@@ -5,6 +5,9 @@ import os
 from werkzeug.security import generate_password_hash
 
 
+#どういったアプリか音声で説明する
+
+
 app=Flask(__name__)
 
 login_manager = LoginManager()
