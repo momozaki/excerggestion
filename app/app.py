@@ -30,12 +30,11 @@ def upload():
 def excer_upload():
     if request.method=="POST":
         user_name = request.form.get("name")
-        user_sex=request.form.get("radio")
         user_pass=request.form.get("password")
         image = request.files["image"]
 
         # 受け取った情報でUserのインスタンスを作成
-        user = User(username=user_name, usersex=user_sex, password=generate_password_hash(user_pass, method='sha256'))
+        user = User(username=user_name, password=generate_password_hash(user_pass, method='sha256'))
         db.session.add(user)#$データベースにuserの情報を登録
         db.session.commit()#保存
 
