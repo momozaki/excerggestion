@@ -50,6 +50,13 @@ h1 {
     border-left: solid 3px #070ee4;
     padding-left: 10px;
   }
+  .password{
+    float: left;
+    margin-right: 20px;
+    width:135px;
+    border-left: solid 3px #070ee4;
+    padding-left: 10px;
+  }
   .upload{
     float: left;
     margin-right: 20px;

@@ -20,14 +20,15 @@
 
         <div class="border">
             <p class="lead_form">登録フォーム</p>
-            <form action="excer_upload" method="POST" name="registration" enctype="multipart/form-data">
+            <form action="/excer_upload" method="POST" name="registration" enctype="multipart/form-data">
 
                 <div class="item">
                     <p class="namae">名前を記入してください</p>
                     <div class="inputs">
-                        <input id="name" type="text" name="name" placeholder="名字 名前">
+                        <input id="name" type="text" name="name" placeholder="名字名前(空白なし)">
                     </div>
                 </div>
+
 
                 <div class="item">
                 <p class="seibetu">性別を選択して下さい</p>
@@ -37,12 +38,23 @@
                         <label for="others"><input id="others" type="radio" value="others" name="radio">その他</label>
                     </div>
                 </div>
+
+
+                <div class="item">
+                <p class="password">パスワードを登録してください</p>
+                    <div class="inputs">
+                        <input type="password" name="password" placeholder="パスワード">
+                    </div>
+                </div>
+
+                
                 <div class="item">
                     <p class="upload">アップロードする手の画像を選択してください</p>
                     <div class="inputs">
                             <input type="file" accept="image/*" name="image" onchange="previewFile(this);" required>
                     </div>
                 </div>
+
 
                 <div class="submit">
                     <input type="submit" value="送信する"><input type="reset" value="リセット">
